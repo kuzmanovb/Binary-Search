@@ -47,10 +47,12 @@ namespace Binary_Search
         {
             Array.Sort(arr);
 
-            var index = (arr.Length - 1) / 2;
-            int length = arr.Length;
+            var arrLength = arr.Length;
 
-            if (arr.Length % 2 == 0)
+            var index = (arrLength - 1) / 2;
+            int length = arrLength;
+
+            if (arrLength % 2 == 0)
             {
                 if (arr[index] == number)
                 {
@@ -64,7 +66,7 @@ namespace Binary_Search
             }
 
 
-            while (length > 0 && index <= arr.Length - 1 && index >= 0)
+            while (length > 0 && index <= arrLength - 1 && index >= 0)
             {
 
                 if (arr[index] == number)
@@ -77,7 +79,7 @@ namespace Binary_Search
                     return arr[index - 1];
                 }
 
-                if (index < arr.Length - 1 && arr[index + 1] == number)
+                if (index < arrLength - 1 && arr[index + 1] == number)
                 {
                     return arr[index + 1];
                 }
